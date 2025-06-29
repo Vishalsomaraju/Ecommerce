@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* clerk user button adjust */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #101820;
+}
+
+.cl-avatarBox {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* carousel arrow  */
+.arrows {
+  height: 40px;
+  width: 40px;
+  margin: 1px;
+}
+
+/* input colours */
+input {
+  background-color: #ffffff;
+  accent-color: cyan;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+/* styles.css or global.css */
+.scrollbar-stable {
+  scrollbar-gutter: stable;
+}
