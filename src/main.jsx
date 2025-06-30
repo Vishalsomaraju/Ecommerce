@@ -21,7 +21,10 @@ const root = createRoot(document.getElementById("root"));
 
 root.render(
   <StrictMode>
-    <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+    <ClerkProvider
+      publishableKey={PUBLISHABLE_KEY}
+      afterSignOutUrl="#/Ecommerce"
+    >
       <DataProvider>
         <CartProvider>
           <App />
