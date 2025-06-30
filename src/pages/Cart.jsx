@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useCart } from "../context/CartContext";
-import { FaRegTrashAlt } from "react-icons/fa";
+import { GoTrash } from "react-icons/go";
 import { LuNotebookText } from "react-icons/lu";
 import { MdDeliveryDining } from "react-icons/md";
 import { GiShoppingBag } from "react-icons/gi";
@@ -78,7 +78,7 @@ const Cart = ({ location, getLocation }) => {
                   onClick={() => deleteItem(item.id)}
                   className="hover:bg-white/20 p-3 rounded-full"
                 >
-                  <FaRegTrashAlt className="text-[#00FFFF] text-2xl cursor-pointer" />
+                  <GoTrash className="text-[#00FFFF] text-2xl cursor-pointer" />
                 </span>
               </div>
             ))}

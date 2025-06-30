@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../assets/Loading4.webm";
 import Breadcrums from "../components/Breadcrums";
-import { IoCartOutline } from "react-icons/io5";
+import { MdOutlineShoppingCart } from "react-icons/md";
 import { useCart } from "../context/CartContext";
 
 const SingleProduct = () => {
@@ -116,7 +116,7 @@ const SingleProduct = () => {
             className="flex items-center gap-2 w-fit bg-gradient-to-r from-cyan-500 to-purple-500 text-white
       text-lg rounded-md shadow-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 px-7 py-2"
           >
-            <IoCartOutline className="w-6 h-6" /> Add {quantity} to Cart
+            Add {quantity} to Cart <MdOutlineShoppingCart className="w-6 h-6" />
           </button>
         </div>
       </div>
