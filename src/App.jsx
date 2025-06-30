@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 import axios from "axios";
 
 import Navbar from "./components/Navbar";
@@ -57,7 +57,7 @@ const App = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#101820] text-[#C5C6C7]">
-      <BrowserRouter>
+      <HashRouter>
         <Navbar
           location={location}
           getLocation={getLocation}
@@ -83,7 +83,7 @@ const App = () => {
           </Routes>
         </main>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };

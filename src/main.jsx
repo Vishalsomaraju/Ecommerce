@@ -11,7 +11,6 @@ import ScrollToTop from "react-scroll-to-top";
 import { FaArrowUp } from "react-icons/fa6";
 import "react-toastify/dist/ReactToastify.css";
 
-// Clerk Publishable Key from .env
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 if (!PUBLISHABLE_KEY) {
