@@ -67,7 +67,7 @@ const App = () => {
         <LoginHandler />
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/Ecommerce" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/products/:id" element={<SingleProduct />} />
             <Route path="/category/:category" element={<CategoryProduct />} />

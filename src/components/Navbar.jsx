@@ -52,7 +52,7 @@ export default function Navbar({
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
         {/* Logo & Location */}
         <div className="flex items-center gap-4">
-          <Link to="/">
+          <Link to="/Ecommerce">
             <h1 className="font-bold text-3xl">
               <span className="text-[#00FFFF] font-serif">E</span>com
             </h1>
@@ -99,7 +99,7 @@ export default function Navbar({
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-7">
           <ul className="flex gap-7 text-lg font-medium">
-            {["/", "/products", "/contact"].map((path, i) => {
+            {["/Ecommerce", "/products", "/contact"].map((path, i) => {
               const labels = ["Home", "Products", "Contact"];
               return (
                 <li key={path}>
@@ -134,14 +134,14 @@ export default function Navbar({
 
           {/* Auth */}
           <div>
-            <SignedOut>
+            <SignedOut redirectUrl="/Ecommerce">
               <SignInButton>
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-md shadow-lg hover:from-cyan-600 hover:scale-105 hover:to-purple-600 transition-all duration-300 px-7 py-2 font-semibold">
                   Sign In
                 </button>
               </SignInButton>
             </SignedOut>
-            <SignedIn>
+            <SignedIn redirectUrl="/Ecommerce">
               <UserButton />
             </SignedIn>
           </div>
@@ -178,7 +178,7 @@ export default function Navbar({
         } bg-[#1c2a35] border-t border-[#00FFFF]`}
       >
         <ul className="flex flex-col gap-4 px-6 py-4 text-base">
-          {["/", "/products", "/contact"].map((path, i) => {
+          {["/Ecommerce", "/products", "/contact"].map((path, i) => {
             const labels = ["Home", "Products", "Contact"];
             return (
               <NavLink
@@ -196,14 +196,14 @@ export default function Navbar({
             );
           })}
           <div className="pt-2">
-            <SignedOut>
+            <SignedOut redirectUrl="/Ecommerce">
               <SignInButton>
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-md shadow-lg hover:from-cyan-600 hover:scale-105 hover:to-purple-600 transition-all duration-300 px-6 py-2 font-semibold">
                   Sign In
                 </button>
               </SignInButton>
             </SignedOut>
-            <SignedIn>
+            <SignedIn redirectUrl="/Ecommerce">
               <UserButton />
             </SignedIn>
           </div>
