@@ -63,7 +63,7 @@ const App = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#101820] text-[#C5C6C7]">
-      <HashRouter>
+      <BrowserRouter>
         <Navbar
           location={location}
           getLocation={getLocation}
@@ -90,7 +90,7 @@ const App = () => {
           </Routes>
         </main>
         <Footer />
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 };
