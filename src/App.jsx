@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  HashRouter,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import axios from "axios";
 
 import Navbar from "./components/Navbar";
@@ -67,6 +73,7 @@ const App = () => {
         <LoginHandler />
         <main className="flex-grow">
           <Routes>
+            <Route path="/" element={<Navigate to="/Ecommerce" replace />} />
             <Route path="/Ecommerce" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/products/:id" element={<SingleProduct />} />

@@ -134,14 +134,14 @@ export default function Navbar({
 
           {/* Auth */}
           <div>
-            <SignedOut redirectUrl="/Ecommerce">
+            <SignedOut redirectUrl="#/Ecommerce">
               <SignInButton>
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-md shadow-lg hover:from-cyan-600 hover:scale-105 hover:to-purple-600 transition-all duration-300 px-7 py-2 font-semibold">
                   Sign In
                 </button>
               </SignInButton>
             </SignedOut>
-            <SignedIn redirectUrl="/Ecommerce">
+            <SignedIn redirectUrl="#/Ecommerce">
               <UserButton />
             </SignedIn>
           </div>
@@ -196,14 +196,14 @@ export default function Navbar({
             );
           })}
           <div className="pt-2">
-            <SignedOut redirectUrl="/Ecommerce">
+            <SignedOut redirectUrl="#/Ecommerce">
               <SignInButton>
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-md shadow-lg hover:from-cyan-600 hover:scale-105 hover:to-purple-600 transition-all duration-300 px-6 py-2 font-semibold">
                   Sign In
                 </button>
               </SignInButton>
             </SignedOut>
-            <SignedIn redirectUrl="/Ecommerce">
+            <SignedIn redirectUrl="#/Ecommerce">
               <UserButton />
             </SignedIn>
           </div>
