@@ -14,6 +14,7 @@ import SingleProduct from "./pages/SingleProduct";
 import CategoryProduct from "./pages/CategoryProduct";
 
 import { useCart } from "./context/CartContext";
+import LoginHandler from "./components/LoginHandler";
 
 const App = () => {
   const [location, setLocation] = useState(null);
@@ -63,6 +64,7 @@ const App = () => {
           openDropdown={openDropdown}
           setOpenDropdown={setOpenDropdown}
         />
+        <LoginHandler />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />

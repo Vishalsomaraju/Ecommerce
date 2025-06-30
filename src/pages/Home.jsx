@@ -3,7 +3,6 @@ import Carousel from "../components/Carousel";
 import { getData } from "../context/DataContext";
 import MidBanner from "../components/MidBanner";
 import Features from "../components/Features";
-import ProductSection from "../components/ProductSection"; // <— custom section assumed
 
 const Home = () => {
   const productRef = useRef(null);

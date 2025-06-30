@@ -75,7 +75,7 @@ const Carousel = () => {
                     onClick={() => navigate(`/products/${item.id}`)}
                     className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-md shadow-lg hover:from-cyan-600 hover:scale-105 hover:to-purple-600 transition-all duration-300 px-6 py-3 font-semibold flex items-center gap-2"
                   >
-                      <MdOutlineShoppingCart className="w-6 h-6" />  Shop Now
+                    Shop Now <MdOutlineShoppingCart className="w-6 h-6" />
                   </button>
                 </div>
               </div>

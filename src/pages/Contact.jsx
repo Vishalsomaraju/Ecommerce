@@ -1,10 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const form = useRef();
-  const [isSent, setIsSent] = useState(false);
-  const [error, setError] = useState(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -16,17 +15,28 @@ const Contact = () => {
         form.current,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
-      .then(
-        () => {
-          setIsSent(true);
-          setError(null);
-          form.current.reset();
-        },
-        (err) => {
-          console.error(err);
-          setError("Something went wrong. Please try again later.");
-        }
-      );
+      .then(() => {
+        toast.success("Message sent successfully!", {
+          position: "bottom-right",
+          style: {
+            backgroundColor: "#e6ffed",
+            color: "#065f46",
+            fontWeight: "bold",
+          },
+        });
+        form.current.reset();
+      })
+      .catch((err) => {
+        console.error(err);
+        toast.error("Something went wrong. Please try again later.", {
+          position: "bottom-right",
+          style: {
+            backgroundColor: "#ffe5e5",
+            color: "#b91c1c",
+            fontWeight: "bold",
+          },
+        });
+      });
   };
 
   return (
@@ -52,7 +62,7 @@ const Contact = () => {
 
             <div>
               <p>
-                <strong>📍 Address:</strong> hyderabad,telangana,india
+                <strong>📍 Address:</strong> Hyderabad, Telangana, India
               </p>
 
               <p>
@@ -102,17 +112,9 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            {isSent && (
-              <p className="text-green-400 font-semibold">
-                Message sent successfully!
-              </p>
-            )}
-
-            {error && <p className="text-red-400 font-semibold">{error}</p>}
-
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-semibold py-2 rounded-xl hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 "
+              className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-semibold py-2 rounded-xl hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
             >
               Send Message 🚀
             </button>

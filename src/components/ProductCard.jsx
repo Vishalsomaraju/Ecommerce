@@ -1,5 +1,5 @@
 import React from "react";
-import { IoCartOutline } from "react-icons/io5";
+import { MdOutlineShoppingCart } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import { FaPlus, FaMinus } from "react-icons/fa";
@@ -53,7 +53,7 @@ const ProductCard = ({ product }) => {
           onClick={() => addToCart(product)}
           className="flex items-center justify-center gap-2 w-full px-4 py-2 rounded-md font-semibold  bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:brightness-110 transition-all"
         >
-          <IoCartOutline className="w-5 h-5" /> Add to Cart
+          Add to Cart <MdOutlineShoppingCart className="w-5 h-5" />
         </button>
       )}
     </div>
